@@ -1,15 +1,19 @@
+// Fetches current weather and forecast weather data for a given city.
 function getWeather() {
     const apiKey = '1bc9445cd07635254608bf102f53dfa8';
     const city = document.getElementById('city').value;
-    
 
+    // Check if city is empty
     if (!city) {
         alert('Please enter the city name');
         return;
     }
+
+    // Construct URLs for current weather and forecast weather
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const forecastWeatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
+    // Fetch current weather data
     fetch(currentWeatherUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -21,6 +25,7 @@ function getWeather() {
             alert('Error fetching current weather data. Please try again');
         });
 
+    // Fetch forecast weather data
     fetch(forecastWeatherUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -33,18 +38,19 @@ function getWeather() {
         });
 }
 
+// Displays the current weather information on the webpage.
 function displayWeather(data) {
     const tempDivInfo = document.getElementById('temp-div');
     const weatherInfoDiv = document.getElementById('weather-info');
     const weatherIcon = document.getElementById('weather-icon');
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
-    
 
     // Clear previous content
     weatherInfoDiv.innerHTML = '';
     tempDivInfo.innerHTML = '';
     hourlyForecastDiv.innerHTML = '';
 
+    // Check if the city is not found
     if (data.cod === '404') {
         weatherInfoDiv.innerHTML = `<p>${data.message}</p>`;
     } else {
@@ -64,13 +70,16 @@ function displayWeather(data) {
     }
 }
 
+// Displays the hourly forecast weather information on the webpage.
 function displayHourForecast(hourlyData) {
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
     hourlyForecastDiv.innerHTML = '';
 
-    const next24Hours = hourlyData.slice(0, 8);
+    // Get the next 8 hours of forecast data
+    const next8Hours = hourlyData.slice(0, 8);
 
-    next24Hours.forEach((item) => {
+    // Iterate over each hour and display the forecast information
+    next8Hours.forEach((item) => {
         const dateTime = new Date(item.dt * 1000);
         const hour = dateTime.getHours();
         const temperature = Math.round(item.main.temp - 273.15);
@@ -88,9 +97,13 @@ function displayHourForecast(hourlyData) {
     });
 }
 
+// Displays the weather icon on the webpage.
 function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
     weatherIcon.style.display = 'block';
+    weatherIcon.style.margin = 'auto';
+    weatherIcon.style.width = '100px';
+    weatherIcon.style.height = '100px';
 }
 
 showImage(); // Call the showImage() function to display the weather icon.

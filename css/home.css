@@ -1,5 +1,5 @@
 body{
-    background-color: #000000;
+    background-image: linear-gradient(to bottom, rgb(51, 211, 211), rgb(13, 121, 215));
     color: aliceblue;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -10,7 +10,8 @@ body{
     padding: 0;
 }
 #weather-container{
-    background-color: #b4bce0;
+    background-image: linear-gradient(to bottom, rgb(169, 219, 219), rgba(109, 187, 255, 0.995));
+    
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -31,26 +32,29 @@ input{
 button{
     padding: 8px;
     border-radius: 10px;
-    border: 1px solid #ffffff;
+    border: 1px solid blue;
     margin-top: 20px;
     width: calc(100% - 16px);
-    background-color: #000000;
+    background-color: blue;
     color: #ffffff;
     cursor: pointer;
+    opacity: 0.6;
 }
 button:hover{
-    background-color: #ffffff;
-    color: #000000;
+    background-color:blue;
+    opacity: 1;
+    
 }
 #temp-div{
-    
     font-size: 60px;
     margin-top: -30px;
+    margin-bottom: 0;
+    
 }
 #weather-icon{
-    width: 100px;
-    height: 100px;
-    margin-bottom: 0;
+    
+    
+    
 }
 #weather-info{
     font-size: 20px;
@@ -60,16 +64,17 @@ button:hover{
     justify-content: space-around;
     margin-top: 20px;
     white-space: nowrap;
-    overflow: auto;
+    overflow-x: auto;
 }
 .hourly-item{
     flex: 0 0 auto;
-    width: 100px;
+    width: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
     color: #ffffff;
+    
 
 }
 .hourly-item img{
