@@ -14,10 +14,12 @@ body{
     
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     border: 1px solid #000000;
     backdrop-filter: blur(10px);
+    transition: 0.5s;
+    
 }
 h1,label,p{
     color: aliceblue;
@@ -39,6 +41,9 @@ button{
     color: #ffffff;
     cursor: pointer;
     opacity: 0.6;
+    transition: 1s;
+    transition-duration: 1s;
+    
 }
 button:hover{
     background-color:blue;
@@ -51,11 +56,7 @@ button:hover{
     margin-bottom: 0;
     
 }
-#weather-icon{
-    
-    
-    
-}
+
 #weather-info{
     font-size: 20px;
 }
