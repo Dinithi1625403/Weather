@@ -8,16 +8,19 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #weather-container{
-    background-image: linear-gradient(to bottom, rgb(169, 219, 219), rgba(109, 187, 255, 0.995));
+    
+    background-color: rgba(0, 0, 0, 0.2);
     
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
     border: 1px solid #000000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) black;
     transition: 0.5s;
     
 }

@@ -67,6 +67,25 @@ function displayWeather(data) {
         weatherInfoDiv.innerHTML = weatherHTML;
         weatherIcon.src = iconUrl;
         weatherIcon.alt = description;
+
+
+        // Change body image based on weather description
+        const body = document.querySelector('body');
+        if (description.includes('clear')) {
+            body.style.backgroundImage = 'url("https://images.pexels.com/photos/5745683/pexels-photo-5745683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")';
+        } else if (description.includes('clouds')) {
+                body.style.backgroundImage = 'url("https://images.pexels.com/photos/20641784/pexels-photo-20641784/free-photo-of-white-dense-cloud-in-sky.jpeg?auto=compress&cs=tinysrgb&w=600")';
+        } else if (description.includes('rain')) {
+            body.style.backgroundImage = 'url("https://images.pexels.com/photos/2144326/pexels-photo-2144326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")';
+        } else if (description.includes('thunderstorm')) {
+            body.style.backgroundImage = 'url("https://images.pexels.com/photos/2531709/pexels-photo-2531709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")';
+        } else if (description.includes('snow')) {
+            body.style.backgroundImage = 'url("https://images.pexels.com/photos/1571442/pexels-photo-1571442.jpeg?auto=compress&cs=tinysrgb&w=600")';
+        } else if (description.includes('dizzel')) {
+            body.style.backgroundImage = 'url("https://images.pexels.com/photos/4215110/pexels-photo-4215110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")';
+        } else {
+            body.style.backgroundImage = 'linear-gradient(to bottom, rgb(51, 211, 211), rgb(13, 121, 215))';
+        }
     }
 }
 
