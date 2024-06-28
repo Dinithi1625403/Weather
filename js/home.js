@@ -3,6 +3,7 @@ function getWeather() {
     const apiKey = '1bc9445cd07635254608bf102f53dfa8';
      const city = document.getElementById('city').value;
 
+
     // Check if city is empty
     if (!city) {
         alert('Please enter the city name');
@@ -12,7 +13,7 @@ function getWeather() {
     // Construct URLs for current weather and forecast weather
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const forecastWeatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
-
+    
     // Fetch current weather data
     fetch(currentWeatherUrl)
         .then((response) => response.json())
@@ -86,6 +87,10 @@ function displayWeather(data) {
             body.style.backgroundImage = 'url("https://images.pexels.com/photos/1571442/pexels-photo-1571442.jpeg?auto=compress&cs=tinysrgb&w=600")';
         } else if (description.includes('dizzel')) {
             body.style.backgroundImage = 'url("https://images.pexels.com/photos/4215110/pexels-photo-4215110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")';
+        } else if (description.includes('mist')) {
+            body.style.backgroundImage = 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQGJ8jn0Sbp9_SzqG1AXmj8pAhkZhFuI2wg&s")';
+        
+        
         } else {
             body.style.backgroundImage = 'linear-gradient(to bottom, rgb(51, 211, 211), rgb(13, 121, 215))';
         }
@@ -131,3 +136,5 @@ function showImage() {
 }
 
 showImage(); // Call the showImage() function to display the weather icon.
+
+
