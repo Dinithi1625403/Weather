@@ -1,6 +1,6 @@
 body{
     background-image: linear-gradient(to bottom, rgb(51, 211, 211), rgb(13, 121, 215));
-    color: aliceblue;
+   
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@ body{
 #weather-container{
     
     background-color: rgba(30, 68, 114, 0.5);
-    color: #ffffff;
+   
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 30px;
@@ -33,15 +33,20 @@ body{
 }
 
 
-h1,label,p{
+h1 {
     color: aliceblue;
 }
+
 input{
     padding: 8px;
     border-radius: 10px;
-    border: 1px solid #ffffff;
-    margin-top: 20px;
+    border: none;
     width: calc(100% - 16px);
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000000;
+    
+    opacity: 0.8;
 }
 button{
     padding: 8px;
@@ -58,6 +63,7 @@ button{
    
     
 }
+
 button:hover{
     background-color:blue;
     opacity: 1;
@@ -72,6 +78,7 @@ button:hover{
 
 #weather-info{
     font-size: 20px;
+    color: white;
 }
 #hourly-forecast{
     display: flex;

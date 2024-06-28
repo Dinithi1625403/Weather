@@ -12,18 +12,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <div id="weather-container" class="card">
-    <h1>Weather Forecast</h1>
-    <input type="text" id="city" placeholder="Enter city name">
-    <div style="margin: 10px;">
-
-    <button   onclick="getWeather()">Search</button>
+        <h1 style="color: white;">Weather Forecast</h1>
+        <input type="text" id="city" placeholder="Enter city name" >
+        <div style="margin: 10px;">
+            <button style="color: white;"      onclick="getWeather()">Search</button>
+        </div>
+        <img id="weather-icon">
+        
+        <div id="temp-div" class="card"></div>
+        <div id="weather-info" class="card"></div>
+        <div id="hourly-forecast" class="card"></div>
     </div>
-    <img id="weather-icon" >
-    <div id="temp-div" class="card"></div>
-    <div id="weather-info" class="card"></div>
-    <div id="hourly-forecast" class="card"></div>
-    </div>
-
 
 </body>
 </html>

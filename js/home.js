@@ -1,7 +1,7 @@
 // Fetches current weather and forecast weather data for a given city.
 function getWeather() {
     const apiKey = '1bc9445cd07635254608bf102f53dfa8';
-    const city = document.getElementById('city').value;
+     const city = document.getElementById('city').value;
 
     // Check if city is empty
     if (!city) {
@@ -67,6 +67,8 @@ function displayWeather(data) {
         weatherInfoDiv.innerHTML = weatherHTML;
         weatherIcon.src = iconUrl;
         weatherIcon.alt = description;
+
+        tempDivInfo.style.color = 'white';
 
 
         // Change body image based on weather description
