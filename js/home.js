@@ -67,6 +67,7 @@ function displayWeather(data) {
         weatherInfoDiv.innerHTML = weatherHTML;
         weatherIcon.src = iconUrl;
         weatherIcon.alt = description;
+        weatherIcon.style.margin= '10px';
 
         tempDivInfo.style.color = 'white';
 
@@ -125,8 +126,8 @@ function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
     weatherIcon.style.display = 'block';
     weatherIcon.style.margin = 'auto';
-    weatherIcon.style.width = '100px';
-    weatherIcon.style.height = '100px';
+   weatherIcon.style.width='100%';
+    weatherIcon.style.height = '100%';
 }
 
 showImage(); // Call the showImage() function to display the weather icon.
