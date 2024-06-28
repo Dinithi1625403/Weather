@@ -13,17 +13,26 @@ body{
 }
 #weather-container{
     
-    background-color: rgba(0, 0, 0, 0.2);
-    
+    background-color: rgba(30, 68, 114, 0.5);
+    color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 30px;
     text-align: center;
     border: 1px solid #000000;
     backdrop-filter: blur(10px) black;
     transition: 0.5s;
+
     
 }
+@media screen and (max-width: 600px) {
+    #weather-container{
+        width: 90%;
+    }
+    
+}
+
+
 h1,label,p{
     color: aliceblue;
 }
@@ -37,15 +46,16 @@ input{
 button{
     padding: 8px;
     border-radius: 10px;
-    border: 1px solid blue;
-    margin-top: 20px;
+    background-image: linear-gradient(to bottom, #00c6ff, #0072ff);
+    border: none;
+    
     width: calc(100% - 16px);
-    background-color: blue;
+  
     color: #ffffff;
     cursor: pointer;
-    opacity: 0.6;
-    transition: 1s;
-    transition-duration: 1s;
+    opacity: 0.8;
+    
+   
     
 }
 button:hover{
@@ -69,7 +79,29 @@ button:hover{
     margin-top: 20px;
     white-space: nowrap;
     overflow-x: auto;
+    
+    
+    
+
 }
+#hourly-forecast::-webkit-scrollbar {
+    width: 10px;
+}
+#hourly-forecast::-webkit-scrollbar-thumb {
+    background-color: #2672cf;
+    border-radius: 10px;
+}
+#hourly-forecast::-webkit-scrollbar-track {
+    
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px grey;
+}
+#hourly-forecast::-webkit-scrollbar-thumb:hover {
+    background-color: #5aa4e0;
+}
+
+
+
 .hourly-item{
     flex: 0 0 auto;
     width: 40px;

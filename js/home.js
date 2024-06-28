@@ -107,12 +107,14 @@ function displayHourForecast(hourlyData) {
 
         const hourlyItemHtml = `
             <div class="hourly-item">
-                <span>${hour}:00</span>
-                <img src="${iconUrl}" alt="hourly Weather Icon">
-                <span>${temperature}&#176;C</span>
+            <span>${hour}:00</span>
+            <img src="${iconUrl}" alt="hourly Weather Icon">
+            <span>${temperature}&#176;C</span>
             </div>`;
+      
 
         hourlyForecastDiv.innerHTML += hourlyItemHtml;
+        
     });
 }
 
