@@ -1,5 +1,5 @@
 <h1 align="center" id="title">Weather Forecast</h1>
-<p align="center"><img src="Screenshot.png" alt="project-image"></p>
+<p align="center"><img src="Screenshot.jpg" alt="project-image"></p>
 
 <p id="description">Our Weather Forecast App is designed to provide accurate and up-to-date weather information. Built using HTML CSS Bootstrap and JavaScript this app offers a user-friendly interface and reliable data to help you plan your day.</p>
 
